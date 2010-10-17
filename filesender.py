@@ -1,6 +1,6 @@
 """ file: filesender.py
 
-    Adapted from: steven wang's <steven.zdwang at gmail.com> post at:
+    Adapted from: Steven Wang's <steven.zdwang at gmail.com> post at:
           http://twistedmatrix.com/pipermail/twisted-python/2007-July/015738.html
 
     Usage: filesender.py [options]
@@ -19,6 +19,27 @@
     Example Output:
 
       Server:
+                shell$ python ~/code/filesender.py --server --port 1234 /tmp
+                    Listening on port 1234 ..
+
+                     + a connection was made
+                     *  IPv4Address(TCP, '127.0.0.1', 44621)
+                     ~ lineReceived:
+                            {"original_file_path": "/home/matt/Videos/hutter-ai.avi", "file_size": 218266926}
+                     * Using upload dir: /tmp
+                     * Receiving into file@ /tmp/data.out
+                     & Entering raw mode. <open file '/tmp/data.out', mode 'wb' at 0x1fb01c8> 218266926
+                     - connectionLost
+
+                    --> finished saving upload@/tmp/data.out
+                    --------------------------------------------------------------------------------
+                    {'client': '127.0.0.1',
+                     'crc': 1713872441,
+                     'file_metadata': ' RIFF (little-endian) data, AVI, 720 x 480, ~30 fps, video',
+                     'file_size': 218266926,
+                     'new_file': '/tmp/data.out',
+                     'original_file': u'/home/matt/Videos/hutter-ai.avi',
+                     'upload_time': datetime.datetime(2010, 10, 16, 22, 27, 18, 683145)}
 
       Client:
                 shell$ python ~/code/filesender.py --client ~/Videos/hutter.avi

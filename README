@@ -1,0 +1,10 @@
+
+README
+
+  The goal of each of these files is to be a standalone demo of a concrete
+  function, implemented in twisted.. Code in this repository falls into a few
+  categories.  In some cases, although solution "outlines" were easy to find,
+  there was no running code.  Some pieces of code are more original.
+
+
+
